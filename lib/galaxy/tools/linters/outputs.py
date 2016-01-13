@@ -27,6 +27,8 @@ def lint_output(tool_xml, lint_ctx):
                     lint_ctx.warn("Using format='input' on output data, format_source attribute is less ambiguous and should be used instead.")
             elif "format_source" in output_attrib:
                 format_set = True
+            elif "auto_format" in output_attrib and output_attrib["auto_format"].lower() == "true" in output_attrib:
+                format_set = True
             if not format_set:
                 lint_ctx.warn("Tool data output doesn't define an output format.")
         elif output.tag == "collection":

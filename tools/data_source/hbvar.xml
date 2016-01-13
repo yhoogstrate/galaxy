@@ -12,7 +12,7 @@
 	<uihints minwidth="800"/>
 	
 	<outputs>
-		<data name="output" format="auto" />
+		<data name="output" auto_format="true"/>
 	</outputs>
 	
 	<options sanitize="False" refresh="True"/>
